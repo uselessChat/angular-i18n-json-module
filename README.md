@@ -1,7 +1,7 @@
 # Angular I18n translation from JsonModule
-Load i18n translation json files by language.
+## Load i18n translation json files by language (locale)
 
-1. Add compile optiosn on file `tsconfig.json`
+1. Add compile options on file `tsconfig.json`
 ```json
 {
   "compilerOptions": {
@@ -24,7 +24,7 @@ class I18nLoader implements TranslateLoader {
   }
 }
 ```
-4. Configure the custom `TranslateLoader`
+4. Configure `TranslateModule` with the custom `TranslateLoader`
 ```javascript
 {
   imports: [
