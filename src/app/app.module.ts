@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { I18nModule } from './i18n/i18n.module';
-import { I18nAssetsJsonPath } from './i18n/i18n.tokens';
+import { I18nStaticAssetsJsonPath, I18nSupportedLanguages } from './i18n/i18n.tokens';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { I18nAssetsJsonPath } from './i18n/i18n.tokens';
     I18nModule,
   ],
   providers: [
-    { provide: I18nAssetsJsonPath, useValue: 'src/assets/i18n/custom' }
+    { provide: I18nStaticAssetsJsonPath, useValue: '/assets/i18n' },
+    { provide: I18nSupportedLanguages, useValue: ['en'] },
   ],
   bootstrap: [AppComponent]
 })
